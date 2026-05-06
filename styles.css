@@ -2,6 +2,8 @@
 
 :root {
   --nav-h: 70px;
+  --logo-large: 96px;
+  --logo-small: 50px;
   --c-bg: #020202;
   --c-moss: #a8c860;
   --c-text: #e2edc8;
@@ -43,6 +45,7 @@ body {
   -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: visible;
 }
 
 .nav-inner {
@@ -88,6 +91,7 @@ body {
 .nav-logo-wrap {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0 12px;
 }
 
@@ -100,12 +104,25 @@ body {
 .nav-logo-wrap a:focus-visible { outline: 2px solid var(--c-moss); outline-offset: 4px; border-radius: 50%; }
 
 .nav-logo-wrap img {
-  height: 50px;
-  width: 50px;
+  width: var(--logo-large);
+  height: var(--logo-large);
   border-radius: 50%;
   object-fit: contain;
   background: rgba(255, 255, 255, 0.06);
   display: block;
+  /* Center of logo sits at nav's bottom edge (half in, half out) */
+  transform: translateY(calc(var(--nav-h) / 2));
+  transition:
+    width 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    height 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform, width, height;
+}
+
+.site-nav.scrolled .nav-logo-wrap img {
+  width: var(--logo-small);
+  height: var(--logo-small);
+  transform: translateY(0);
 }
 
 .nav-toggle {
