@@ -2,7 +2,7 @@
 
 :root {
   --nav-h: 70px;
-  --logo-large: 96px;
+  --logo-large: 280px;
   --logo-small: 50px;
   --c-bg: #020202;
   --c-moss: #a8c860;
@@ -54,6 +54,7 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: var(--nav-h);
   align-items: center;
   padding: 0 28px;
   gap: 8px;
@@ -108,21 +109,8 @@ body {
   height: var(--logo-large);
   border-radius: 50%;
   object-fit: contain;
-  background: rgba(255, 255, 255, 0.06);
   display: block;
-  /* Center of logo sits at nav's bottom edge (half in, half out) */
-  transform: translateY(calc(var(--nav-h) / 2));
-  transition:
-    width 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
-    height 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
-    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
   will-change: transform, width, height;
-}
-
-.site-nav.scrolled .nav-logo-wrap img {
-  width: var(--logo-small);
-  height: var(--logo-small);
-  transform: translateY(0);
 }
 
 .nav-toggle {
