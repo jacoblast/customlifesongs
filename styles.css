@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
   --nav-h: 70px;
@@ -14,10 +14,11 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Jost', sans-serif;
   color: var(--c-text);
   min-height: 100vh;
-  line-height: 1.75;
+  font-size: 16px;
+  line-height: 1.6;
   background:
     radial-gradient(circle at 3.68% 6.94%, #4D6001 0%, 11.55%, rgba(77,96,1,0) 35%),
     radial-gradient(circle at 92.97% 9.55%, #FAAA63 0%, 17.5%, rgba(250,170,99,0) 35%),
@@ -68,7 +69,7 @@ body {
 .nav-links a {
   color: rgba(226, 237, 200, 0.78);
   text-decoration: none;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.11em;
@@ -138,7 +139,7 @@ body {
 .nav-mobile a {
   color: rgba(226, 237, 200, 0.78);
   text-decoration: none;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -196,7 +197,7 @@ main { padding-top: var(--nav-h); }
   width: 100%;
   text-align: center;
   padding: 28px 40px 48px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: clamp(2.2rem, 5vw, 4.2rem);
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -214,7 +215,7 @@ main { padding-top: var(--nav-h); }
 }
 
 .page-header h1 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: clamp(1.9rem, 3.5vw, 3rem);
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -237,7 +238,7 @@ main { padding-top: var(--nav-h); }
 }
 
 .about-split-text h2 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: clamp(1.3rem, 1.9vw, 1.75rem);
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -291,7 +292,7 @@ main { padding-top: var(--nav-h); }
 }
 
 .newsletter h3 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.13em;
@@ -317,7 +318,7 @@ main { padding-top: var(--nav-h); }
   border: 1px solid rgba(255,255,255,0.18);
   border-radius: 2px;
   color: #fff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: 0.95rem;
   transition: border-color 0.18s;
 }
@@ -330,7 +331,7 @@ main { padding-top: var(--nav-h); }
   border: 1px solid rgba(255,255,255,0.28);
   border-radius: 2px;
   color: #fff;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -379,7 +380,7 @@ main { padding-top: var(--nav-h); }
 }
 
 .contact-section h2 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -440,7 +441,7 @@ main { padding-top: var(--nav-h); }
 }
 
 .about-bio-text h1 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -501,7 +502,7 @@ main { padding-top: var(--nav-h); }
 
 .video-placeholder strong {
   display: block;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -532,7 +533,7 @@ main { padding-top: var(--nav-h); }
 }
 
 .song-list li a.listen-link {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.09em;
@@ -589,7 +590,7 @@ summary.faq-question {
   align-items: center;
   padding: 22px 4px;
   cursor: pointer;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.09em;
@@ -662,7 +663,7 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   text-align: center;
   padding: 20px 32px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.13em;
