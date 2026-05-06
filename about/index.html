@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me — Custom Life Songs</title>
+  <meta name="description" content="Meet Jen, a passionate songwriter and mental health professional based in the Pacific Northwest with over 30 years of experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/" class="active">About Me</a>
+        <a href="/legacy-projects/">Legacy Projects</a>
+      </div>
+      <div class="nav-logo-wrap">
+        <a href="/" aria-label="Custom Life Songs — home">
+          <img src="/images/logo.png" alt="Custom Life Songs" width="50" height="50">
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="/baby-wishes/">Baby Wishes</a>
+        <a href="/other-custom-songs/">Other Custom Songs</a>
+        <a href="/faq/">FAQ</a>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="nav-btn">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="/">Home</a>
+      <a href="/about/" class="active">About Me</a>
+      <a href="/legacy-projects/">Legacy Projects</a>
+      <a href="/baby-wishes/">Baby Wishes</a>
+      <a href="/other-custom-songs/">Other Custom Songs</a>
+      <a href="/faq/">FAQ</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="about-bio">
+      <div class="about-bio-img">
+        <img src="/images/about-portrait.jpg" alt="Jen, songwriter and musician">
+      </div>
+      <div class="about-bio-text">
+        <h1>Hello</h1>
+        <p>Welcome to my world of custom songwriting! I am a passionate songwriter and mental health professional based in the Pacific Northwest, with over 30 years of experience playing guitar and writing songs, including 15 years dedicated to custom songwriting. My approach is both heartfelt and engaging, as I strive to learn about the unique stories of each individual I work with. Whether it's a birthday, wedding, or a tribute to someone's life, my songs capture the essence of personal experiences and emotions.</p>
+        <p>I specialize in creating songs that help people tell their life stories, making them a meaningful gift, especially for older adults. The process involves intimate interviews, allowing me to connect with the person for whom the song is being written, as well as their loved ones. I believe that everyone has a story worth telling, and I am here to help honor those stories through music.</p>
+        <p>As an active member of the songwriting community in the region, I am connected to many talented musicians, which enriches my creative process. Let's work together to create a beautiful legacy project that resonates with you and your loved ones.</p>
+      </div>
+    </div>
+
+    <div class="newsletter">
+      <h3>Subscribe to My Newsletter</h3>
+      <!-- TODO: Replace this form action with your Mailchimp embed URL -->
+      <form action="#" method="post">
+        <input type="email" name="EMAIL" placeholder="Enter your email here" required aria-label="Email address">
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+
+  </main>
+
+  <footer>copyright 2024 by Custom Life Songs</footer>
+
+  <script>
+    const btn = document.getElementById('nav-btn');
+    const menu = document.getElementById('nav-mobile');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+
+</body>
+</html>

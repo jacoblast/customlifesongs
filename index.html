@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Life Songs</title>
+  <meta name="description" content="Personalized custom songs that capture the essence of your life story. Based in the Pacific Northwest.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <div class="nav-links">
+        <a href="/" class="active">Home</a>
+        <a href="/about/">About Me</a>
+        <a href="/legacy-projects/">Legacy Projects</a>
+      </div>
+      <div class="nav-logo-wrap">
+        <a href="/" aria-label="Custom Life Songs — home">
+          <img src="/images/logo.png" alt="Custom Life Songs" width="50" height="50">
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="/baby-wishes/">Baby Wishes</a>
+        <a href="/other-custom-songs/">Other Custom Songs</a>
+        <a href="/faq/">FAQ</a>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="nav-btn">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="/" class="active">Home</a>
+      <a href="/about/">About Me</a>
+      <a href="/legacy-projects/">Legacy Projects</a>
+      <a href="/baby-wishes/">Baby Wishes</a>
+      <a href="/other-custom-songs/">Other Custom Songs</a>
+      <a href="/faq/">FAQ</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero" aria-label="Hero">
+      <img src="/images/hero-couple.jpg" alt="Couple sharing a moment outdoors" class="hero-img">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-tint" aria-hidden="true"></div>
+      <h1 class="hero-title">Custom Life Songs</h1>
+    </section>
+
+    <div class="about-split">
+      <div class="about-split-text">
+        <h2>About Custom Life Songs</h2>
+        <p>I am passionate about capturing the essence of an individual through music! I love talking to people about their lives and loved ones. Through these conversations, I learn what makes each person unique and special, and synthesize what people say into personalized songs.</p>
+        <p>I allow the people to choose the mood of music that resonates with them, whether it's joyful, reflective, nostalgic, etc. My mission is to create a lasting musical tribute that honors a life journey, preserving their memories in a beautiful and meaningful way.</p>
+        <p>Whether you are a family wanting to commemorate your parent's life, or someone wanting to leave a legacy song for your children, I'd love to help. Let's create a soundtrack to your story together!</p>
+      </div>
+      <div class="about-split-img">
+        <img src="/images/guitar-woman.jpg" alt="Jen holding her guitar">
+      </div>
+    </div>
+
+    <div class="newsletter">
+      <h3>Subscribe to My Newsletter</h3>
+      <!-- TODO: Replace this form action with your Mailchimp embed URL -->
+      <form action="#" method="post">
+        <input type="email" name="EMAIL" placeholder="Enter your email here" required aria-label="Email address">
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+
+    <div class="testimonial-section">
+      <div class="testimonial">
+        <p>"Working with Jen was a joy. My sibling group hired Jen to create a song for our dad, who is living with dementia and bed bound. She was very kind and sweet and gentle with my dad. She surprisingly coaxed some gems out of him and he really enjoyed the interview process. We shared a lot of laughs. Jen also interviewed each of the siblings to get a holistic perspective on what might go into the song. Jen crafted the perfect song for our dad! It is sweet, tender, funny and catchy. Jen sent out the words and the recorded song to the family so we could learn it and we surprised him by singing it to him (with Jen!) on his 83rd birthday. He was tapping his toes and smiling. I play the recorded song for him just about every time I visit and he loves it every time. What a way to connect with him, even as his communication is very limited these days. My whole family is filled with gratitude for this priceless legacy song for dad. Thanks Jen! You're the best. So fun to collaborate with and made the whole process deep and meaningful."</p>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <h2>Get in Touch</h2>
+      <p>Have a question or want to discuss a custom song? Feel free to reach out at any time!</p>
+      <p><a href="mailto:customlifesongs@gmail.com">customlifesongs@gmail.com</a></p>
+    </div>
+
+  </main>
+
+  <footer>copyright 2024 by Custom Life Songs</footer>
+
+  <script>
+    const btn = document.getElementById('nav-btn');
+    const menu = document.getElementById('nav-mobile');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+
+</body>
+</html>

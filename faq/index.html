@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — Custom Life Songs</title>
+  <meta name="description" content="Frequently asked questions about custom songwriting — interviews, recordings, live performances, cost, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About Me</a>
+        <a href="/legacy-projects/">Legacy Projects</a>
+      </div>
+      <div class="nav-logo-wrap">
+        <a href="/" aria-label="Custom Life Songs — home">
+          <img src="/images/logo.png" alt="Custom Life Songs" width="50" height="50">
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="/baby-wishes/">Baby Wishes</a>
+        <a href="/other-custom-songs/">Other Custom Songs</a>
+        <a href="/faq/" class="active">FAQ</a>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="nav-btn">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="/">Home</a>
+      <a href="/about/">About Me</a>
+      <a href="/legacy-projects/">Legacy Projects</a>
+      <a href="/baby-wishes/">Baby Wishes</a>
+      <a href="/other-custom-songs/">Other Custom Songs</a>
+      <a href="/faq/" class="active">FAQ</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="page-header">
+      <h1>Frequently Asked Questions</h1>
+    </div>
+
+    <div class="faq-wrap">
+
+      <details class="faq-item" open>
+        <summary class="faq-question">
+          What do the interviews entail?
+          <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+        </summary>
+        <div class="faq-answer">
+          <p>Individual interviews typically last for approximately an hour or two, where I will ask questions about your life, trying to pull out what has been most special to you and/or your loved ones. I will also play various types of music for you, so that you can pick the style of song that you would like. I may also require a written questionnaire.</p>
+          <p>For group processes, the process varies, but I will usually do a combination of interviews and questionnaires, depending on the number of people involved. Group songs require a point person, who will contact participants with the form, and who I may have follow-up questions for.</p>
+          <p>For other types of songs, interviews and forms depend on the song type and process (individual or group).</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          Can I add a live performance?
+          <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+        </summary>
+        <div class="faq-answer">
+          <p>Yes! Live performances are available for an extra cost, depending on availability. I would love to come and perform your song for you and/or your loved ones. Just let me know at the time of your booking when and where you would like to have your song played, and we will make a plan.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          What does the recording include?
+          <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+        </summary>
+        <div class="faq-answer">
+          <p>The recording process varies in type and length, and you choose the level of complexity of production. I can make you a simple recording fairly quickly and inexpensively, but you may also choose to add extra instrumentation and production. You may choose the number and types of instruments, the type of vocalist, and the all-around level of production.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          What is the cost?
+          <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+        </summary>
+        <div class="faq-answer">
+          <p>Cost varies, depending on a number of factors including the number of people involved in the interviews, the level of production you choose for the recording, and if you choose to add a live performance. Please <a href="mailto:customlifesongs@gmail.com" style="color:var(--c-moss);font-weight:700;">get in touch</a> for a quote today!</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          What other types of songs are available?
+          <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+        </summary>
+        <div class="faq-answer">
+          <p>The sky is the limit here! We are able to write songs for any type of occasion, including:</p>
+          <ul>
+            <li>Custom Life Songs</li>
+            <li>Group Life Songs</li>
+            <li>Weddings</li>
+            <li>Birthdays &amp; Anniversaries</li>
+            <li>Kids Songs</li>
+            <li>Graduations &amp; Memorials</li>
+            <li>Pet Theme Songs</li>
+            <li>Life Milestones &amp; Coming of Age</li>
+            <li>Achievements &amp; Recognition</li>
+            <li>Parenthood &amp; Baby Wishes</li>
+            <li>Roasts &amp; Pranks (good natured)</li>
+            <li>Family Milestones</li>
+            <li>Journeys &amp; Arrivals</li>
+            <li>And more!</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+
+  </main>
+
+  <footer>copyright 2024 by Custom Life Songs</footer>
+
+  <script>
+    const btn = document.getElementById('nav-btn');
+    const menu = document.getElementById('nav-mobile');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+
+</body>
+</html>

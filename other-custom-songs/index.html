@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Other Custom Songs — Custom Life Songs</title>
+  <meta name="description" content="Any type of custom song you can imagine — weddings, birthdays, anniversaries, kids songs, memorials, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About Me</a>
+        <a href="/legacy-projects/">Legacy Projects</a>
+      </div>
+      <div class="nav-logo-wrap">
+        <a href="/" aria-label="Custom Life Songs — home">
+          <img src="/images/logo.png" alt="Custom Life Songs" width="50" height="50">
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="/baby-wishes/">Baby Wishes</a>
+        <a href="/other-custom-songs/" class="active">Other Custom Songs</a>
+        <a href="/faq/">FAQ</a>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="nav-btn">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="/">Home</a>
+      <a href="/about/">About Me</a>
+      <a href="/legacy-projects/">Legacy Projects</a>
+      <a href="/baby-wishes/">Baby Wishes</a>
+      <a href="/other-custom-songs/" class="active">Other Custom Songs</a>
+      <a href="/faq/">FAQ</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="page-header">
+      <h1>Any type of song you wish!<br>The sky is the limit!</h1>
+    </div>
+
+    <div class="section section-centered">
+      <p>I am able to fulfill just about any type of song request! The process is the same as for custom life songs — I will interview you about what is most important, and synthesize your answers into a custom song. You can choose to add a professionally produced recording, and/or a performance of your song, based on availability. I can write songs about any of the following topics, and more!</p>
+
+      <ul class="song-list">
+        <li><span>Custom Life Songs</span></li>
+        <li><span>Group Life Songs</span></li>
+        <li><span>Weddings</span> <a href="https://soundcloud.com/jen-wagner/leaving-no-doubt" target="_blank" rel="noopener" class="listen-link" aria-label="Listen to a wedding song example">Listen</a></li>
+        <li><span>Birthdays</span></li>
+        <li><span>Anniversaries</span> <a href="https://open.spotify.com/track/6nOKgswnVJA8yGeYqt3IXh" target="_blank" rel="noopener" class="listen-link" aria-label="Listen to an anniversary song example">Listen</a></li>
+        <li><span>Kids Songs</span> <a href="https://open.spotify.com/track/67tzv25oL4nYIYBnwo9hKu" target="_blank" rel="noopener" class="listen-link" aria-label="Listen to a kids song example">Listen</a></li>
+        <li><span>Graduations</span></li>
+        <li><span>Memorials</span></li>
+        <li><span>Pet Theme Songs</span> <a href="https://soundcloud.com/jen-wagner/norman-1/s-95vAUHJ9Edd" target="_blank" rel="noopener" class="listen-link" aria-label="Listen to a pet theme song example">Listen</a></li>
+        <li><span>Life Milestones</span></li>
+        <li><span>Coming of Age</span></li>
+        <li><span>Achievements</span></li>
+        <li><span>Parenthood</span></li>
+        <li><span>Roasts &amp; Pranks</span></li>
+        <li><span>Family Milestones</span></li>
+        <li><span>Recognition</span></li>
+        <li><span>Journeys &amp; Arrivals</span></li>
+        <li><span>Cheering Up</span></li>
+        <li><span>Connections</span></li>
+        <li><span>And more!</span></li>
+      </ul>
+    </div>
+
+    <div class="newsletter">
+      <h3>Subscribe to My Newsletter</h3>
+      <!-- TODO: Replace this form action with your Mailchimp embed URL -->
+      <form action="#" method="post">
+        <input type="email" name="EMAIL" placeholder="Enter your email here" required aria-label="Email address">
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+
+  </main>
+
+  <footer>copyright 2024 by Custom Life Songs</footer>
+
+  <script>
+    const btn = document.getElementById('nav-btn');
+    const menu = document.getElementById('nav-mobile');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+
+</body>
+</html>

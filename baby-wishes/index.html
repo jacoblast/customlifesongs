@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Wishes — Custom Life Songs</title>
+  <meta name="description" content="A personalized song capturing all the wishes you have for your child — a lasting gift for the whole family.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About Me</a>
+        <a href="/legacy-projects/">Legacy Projects</a>
+      </div>
+      <div class="nav-logo-wrap">
+        <a href="/" aria-label="Custom Life Songs — home">
+          <img src="/images/logo.png" alt="Custom Life Songs" width="50" height="50">
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="/baby-wishes/" class="active">Baby Wishes</a>
+        <a href="/other-custom-songs/">Other Custom Songs</a>
+        <a href="/faq/">FAQ</a>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="nav-btn">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="/">Home</a>
+      <a href="/about/">About Me</a>
+      <a href="/legacy-projects/">Legacy Projects</a>
+      <a href="/baby-wishes/" class="active">Baby Wishes</a>
+      <a href="/other-custom-songs/">Other Custom Songs</a>
+      <a href="/faq/">FAQ</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="page-header">
+      <h1>Baby Wishes</h1>
+    </div>
+
+    <div class="baby-wishes-content">
+      <p>Every parent has wishes for their child, and I will help you put these into song. I will interview you about the types of things you would like to say to your child, and will synthesize what you say into melody and lyrics for them to hear as they grow older, and for you all to share together as a family. We can include as many people from your family and friends as you like in this process.</p>
+    </div>
+
+  </main>
+
+  <footer>copyright 2024 by Custom Life Songs</footer>
+
+  <script>
+    const btn = document.getElementById('nav-btn');
+    const menu = document.getElementById('nav-mobile');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+
+</body>
+</html>
