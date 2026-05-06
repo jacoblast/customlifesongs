@@ -15,18 +15,9 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Lato', sans-serif;
-  background-color: var(--c-bg);
   color: var(--c-text);
   min-height: 100vh;
   line-height: 1.75;
-}
-
-/* Exact gradient from original Wix site */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
   background:
     radial-gradient(circle at 3.68% 6.94%, #4D6001 0%, 11.55%, rgba(77,96,1,0) 35%),
     radial-gradient(circle at 92.97% 9.55%, #FAAA63 0%, 17.5%, rgba(250,170,99,0) 35%),
@@ -35,6 +26,8 @@ body::before {
     radial-gradient(circle at 46.56% 11.50%, rgba(214,222,72,0.99) 0%, 25%, rgba(214,222,72,0) 50%),
     radial-gradient(circle at 51.12% 89.99%, #93C3FF 0%, 42%, rgba(147,195,255,0) 70%),
     radial-gradient(circle at 48.90% 49.52%, #020202 0%, 100%, rgba(2,2,2,0) 100%);
+  background-size: 100% 100%;
+  background-attachment: scroll;
 }
 
 /* ================================
