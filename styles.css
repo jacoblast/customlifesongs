@@ -2,7 +2,7 @@
 
 :root {
   --nav-h: 70px;
-  --c-bg: #0e1804;
+  --c-bg: #020202;
   --c-moss: #a8c860;
   --c-text: #e2edc8;
   --c-text-dim: rgba(226, 237, 200, 0.60);
@@ -21,20 +21,20 @@ body {
   line-height: 1.75;
 }
 
-/* Fixed bokeh-style gradient background — approximates the blurred foliage photo */
+/* Exact gradient from original Wix site */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(ellipse at 86% 44%, rgba(145, 122, 195, 0.92) 0%, transparent 30%),
-    radial-gradient(ellipse at 74% 65%, rgba(158, 138, 200, 0.65) 0%, transparent 26%),
-    radial-gradient(ellipse at 60% 28%, rgba(210, 178, 52, 0.88) 0%, transparent 32%),
-    radial-gradient(ellipse at 46% 76%, rgba(168, 190, 38, 0.80) 0%, transparent 34%),
-    radial-gradient(ellipse at 14% 54%, rgba(104, 132, 36, 0.85) 0%, transparent 38%),
-    radial-gradient(ellipse at 36% 12%, rgba(90, 112, 26, 0.80) 0%, transparent 32%),
-    linear-gradient(150deg, #727e28 0%, #a0aa36 24%, #b09c2c 50%, #96a224 74%, #5a6620 100%);
+    radial-gradient(circle at 3.68% 6.94%, #4D6001 0%, 11.55%, rgba(77,96,1,0) 35%),
+    radial-gradient(circle at 92.97% 9.55%, #FAAA63 0%, 17.5%, rgba(250,170,99,0) 35%),
+    radial-gradient(circle at 95.21% 90.48%, #C9C6FF 0%, 34.1%, rgba(201,198,255,0) 55%),
+    radial-gradient(circle at 4.31% 93.35%, #97B49D 0%, 29.9%, rgba(151,180,157,0) 65%),
+    radial-gradient(circle at 46.56% 11.50%, rgba(214,222,72,0.99) 0%, 25%, rgba(214,222,72,0) 50%),
+    radial-gradient(circle at 51.12% 89.99%, #93C3FF 0%, 42%, rgba(147,195,255,0) 70%),
+    radial-gradient(circle at 48.90% 49.52%, #020202 0%, 100%, rgba(2,2,2,0) 100%);
 }
 
 /* ================================
