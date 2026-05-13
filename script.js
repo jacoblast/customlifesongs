@@ -13,21 +13,29 @@
     btn.setAttribute('aria-expanded', 'false');
   }));
 
-  const LOGO_LARGE = 280;  // px, hero size
-  const LOGO_SMALL = 50;   // px, nav size
-  const START_Y = 150;     // px logo center starts below nav center
-  const SCROLL_RANGE = 280;
+  const isHome = window.location.pathname === '/' || window.location.pathname === '/index.html';
 
-  function updateLogo() {
-    const t = Math.min(window.scrollY / SCROLL_RANGE, 1);
-    const size = LOGO_LARGE + (LOGO_SMALL - LOGO_LARGE) * t;
-    const y = START_Y * (1 - t);
-    logoImg.style.width = size + 'px';
-    logoImg.style.height = size + 'px';
-    logoImg.style.transform = `translateY(${y}px)`;
-    nav.classList.toggle('scrolled', t >= 1);
+  if (isHome) {
+    const LOGO_LARGE = 280;
+    const LOGO_SMALL = 50;
+    const START_Y = 150;
+    const SCROLL_RANGE = 280;
+
+    function updateLogo() {
+      const t = Math.min(window.scrollY / SCROLL_RANGE, 1);
+      const size = LOGO_LARGE + (LOGO_SMALL - LOGO_LARGE) * t;
+      const y = START_Y * (1 - t);
+      logoImg.style.width = size + 'px';
+      logoImg.style.height = size + 'px';
+      logoImg.style.transform = `translateY(${y}px)`;
+      nav.classList.toggle('scrolled', t >= 1);
+    }
+
+    window.addEventListener('scroll', updateLogo, { passive: true });
+    updateLogo();
+  } else {
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
   }
-
-  window.addEventListener('scroll', updateLogo, { passive: true });
-  updateLogo();
 })();
